@@ -39,13 +39,15 @@ a {
 
 .header {
   background-color: #9BF9CC	;
-  margin-bottom: 48px;
   padding: 20px 0;
   height: 100px;
 }
+
 .inner {
   width: 100vw;
 }
+
+
 .nav {
   width: 100%;
   display: flex;
@@ -142,6 +144,64 @@ a {
 
 /* メイン */
 
+.main_inner {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner_left {
+  width: 20vw;
+  background-color: white;
+
+}
+
+.name {
+  text-align: center;
+  font-size: 30px;
+}
+
+.name__one {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.name__two {
+  margin: 30px 0;
+  
+  
+}
+
+.name__three {
+  margin: 10px 0;
+  padding-bottom: 5px;
+  
+}
+
+.inner_right {
+  width: 20vw;
+  background-color: white;
+ 
+}
+
+.text{
+  display: inline;
+  
+}
+
+.text__one {
+  margin: 30px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.text__two {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .greeting{
   margin-bottom: 20px;
 }
@@ -184,20 +244,6 @@ a {
 }
 
 
-.text__one{
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.text__two{
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  
-}
 
 /* 詳細ページ */
 .prototype__wrapper{
