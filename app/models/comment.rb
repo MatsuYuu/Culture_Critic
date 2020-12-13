@@ -8,5 +8,7 @@ class Comment < ApplicationRecord
     validates :artwork
     validates :evaluation_id
     validates :text
+
+  end
      
 end
