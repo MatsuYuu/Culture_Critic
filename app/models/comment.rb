@@ -1,4 +1,7 @@
 class Comment < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :genre
+  belongs_to :evaluation
   
   belongs_to :user
 
@@ -6,9 +9,10 @@ class Comment < ApplicationRecord
     validates :title
     validates :genre_id
     validates :artwork
-    validates :evaluation_id
     validates :text
 
   end
      
+  validates :genre_id, numericality: { other_than: 1 } 
+  
 end

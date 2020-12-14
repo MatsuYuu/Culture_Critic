@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card__body">
+    <%= link_to comment.title, comment_path(comment), class: :card__title%>
+    <div class="card__body__two">
+      <%= link_to comment.genre_id, class: :card__genre %>
+      <%= link_to comment.evaluation_id, class: :card__evaluation %>
+      <%= link_to "name", root_path, class: :card__name %>
+    </div>
+  </div>
+</div>
