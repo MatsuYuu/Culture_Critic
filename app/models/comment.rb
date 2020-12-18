@@ -15,4 +15,11 @@ class Comment < ApplicationRecord
      
   validates :genre_id, numericality: { other_than: 1 } 
   
+  def self.search(search)
+    if search != ""
+      Comment.where('text LIKE(?)', "%#{search}%")
+    else
+      Comment.all
+    end
+  end
 end

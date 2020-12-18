@@ -39,6 +39,9 @@ class CommentsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @comment = Comment.search(params[:keyword])
+  end
 
   private
 
