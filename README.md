@@ -1,24 +1,52 @@
-# README
+# アプリ名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Cultuer_Critic
 
-Things you may want to cover:
+# 概要
 
-* Ruby version
+## 映画や音楽など様々なカルチャーをユーザーが5段階で評価し、共有するアプリです。
 
-* System dependencies
+# 本番環境
 
-* Configuration
 
-* Database creation
+# 工夫したポイント
 
-* Database initialization
 
-* How to run the test suite
+# 使用技術（開発環境）
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+# 課題・今後実装したい機能
 
-* ...
+
+# DB設計
+
+## usersテーブル
+
+|Column            |Type   |Options                  |
+|------------------|-------|-------------------------|
+|nickname          |string |null: false              |
+|email             |string |null: false, unique: true|
+|encrypted_password|string |null: false              |
+
+
+### Association
+
+- has_many :comments
+
+
+## commentsテーブル
+
+|Column     |Type      |Options                        |
+|-----------|----------|-------------------------------|
+|title      |string    |null: false                    |
+|genre_id   |integer   |null: false                    |
+|artwork    |string    |null: false                    |
+|evaluation |integer   |                               |
+|text       |text      |null: false                    |
+
+
+### Association
+
+- belongs_to :user
+
+
